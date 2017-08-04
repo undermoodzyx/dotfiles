@@ -7,7 +7,6 @@
 
 # author: undermoodzyx
 
-set -x
 # change working directory to home dir
 cd ~
 
@@ -20,6 +19,9 @@ files=(
 
 # token for checking whether need to git process
 declare need_git
+
+# check this script self first
+
 
 for file in $files; do
 
@@ -38,4 +40,3 @@ if [[ $need_git ]]; then
     git commit -m "update at $(date +%Y%m%d__%X)"
     # git push origin master
 fi
-set +x
