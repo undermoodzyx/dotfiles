@@ -38,5 +38,6 @@ if [[ $need_git ]]; then
     cd ~/dotfiles
     git add .
     git commit -m "update at $(date +%Y%m%d__%X)"
+    git push origin master
     # git push origin master
 fi
